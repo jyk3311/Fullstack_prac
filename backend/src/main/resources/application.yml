@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:appdb}
+    username: ${DB_USER:appuser}
+    password: ${DB_PASSWORD:apppass}
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: app
+        format_sql: true

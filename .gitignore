@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Java / Gradle
+backend/build/
+backend/.gradle/
+backend/out/
+backend/.idea/
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
+
+# Environment
+.env
+*.env
+
+# Docker local data
+postgres-data/
+
+# Temporary
+tmp/
+temp/
