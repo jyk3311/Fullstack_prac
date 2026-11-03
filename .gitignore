@@ -28,3 +28,6 @@ postgres-data/
 # Temporary
 tmp/
 temp/
+
+# Coverity 생성물
+/.coverity/
