@@ -120,7 +120,11 @@ pipeline {
 
         stage('Check Containers') {
             steps {
-                bat 'docker ps'
+                timeout(time: 3, unit: 'MINUTES') {
+                    powershell encoding: 'UTF-8', script: '''
+                        & "$env:WORKSPACE/scripts/wait-for-deployment.ps1" -ProjectName 'fullstack-pipeline-test'
+                    '''
+                }
             }
         }
     }
