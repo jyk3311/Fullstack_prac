@@ -113,8 +113,8 @@ pipeline {
 
         stage('Build and Deploy') {
             steps {
-                bat 'docker compose down'
-                bat 'docker compose up -d --build'
+                bat 'docker compose -p fullstack-pipeline-test down'
+                bat 'docker compose -p fullstack-pipeline-test up -d --build'
             }
         }
 
